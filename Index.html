@@ -1,0 +1,71 @@
+# Valentineproposal
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Proposal</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, pink, lightcoral);
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #e60073;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin: 20px;
+    }
+
+    #yesBtn {
+      background-color: #ff4d88;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #cccccc;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>PAVNEET, will you be my Valentine? 💖</h1>
+  <button id="yesBtn" onclick="yesClick()">Yes</button>
+  <button id="noBtn" onmouseover="moveNo()">No</button>
+</div>
+
+<script>
+  function moveNo() {
+    const btn = document.getElementById("noBtn");
+    const x = Math.floor(Math.random() * 200) - 100;
+    const y = Math.floor(Math.random() * 200) - 100;
+    btn.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  function yesClick() {
+    alert("Yay! 💖 I knew you would say Yes!");
+  }
+</script>
+
+</body>
+</html>
